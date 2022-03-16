@@ -18,5 +18,11 @@ pipeline {
                 sh "mvn test"
             }
         }
+
+        stage('Test Jmeter') {
+            steps {
+                sh "mvn verify -Pperformance"
+            }
+        }
     }
 }
